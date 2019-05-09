@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i');
+
+ul {
+	text-align: justify;
+}
+
+.profile-pic {
+    border-radius: 2%;
+    max-width: 100%;
+    height: auto;
+}
+
+.portrait_image {
+    height: 160px;
+    width: 160px;
+}
+
+img {
+    	border-radius: 1.5%;
+}
+a {
+color: #1772d0;
+text-decoration:none;
+}
+a:focus, a:hover {
+color: #f09228;
+text-decoration:none;
+}
+body,td,th,tr,p,a {
+font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+font-size: 14px
+}
+strong {
+font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+font-size: 14px;
+}
+heading {
+font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+font-size: 22px;
+}
+papertitle {
+font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+font-size: 14px;
+font-weight: 700
+}
+name {
+font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+font-size: 32px;
+}
+quote {
+font-family: 'Open Sans';
+}
+.one
+{
+width: 160px;
+height: 160px;
+position: relative;
+}
+.two
+{
+width: 160px;
+height: 160px;
+position: absolute;
+transition: opacity .2s ease-in-out;
+-moz-transition: opacity .2s ease-in-out;
+-webkit-transition: opacity .2s ease-in-out;
+}
+.fade {
+ transition: opacity .2s ease-in-out;
+ -moz-transition: opacity .2s ease-in-out;
+ -webkit-transition: opacity .2s ease-in-out;
+}
+span.highlight {
+    background-color: #ffffd0;
+}
