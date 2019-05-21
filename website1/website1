@@ -1,1 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" type="image/ico" href="favicon.ico">
 
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112406581-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-112406581-2');
+	</script>
+
+  <title>ALI MAZLUMOV</title>
+  </head>
+  <body>
+  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tr>
+    <td>
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tr>
+        <td width="67%" valign="middle">
+        <p align="center">
+          <name>ALI MAZLUMOV</name>
+        </p>
+        <p align="justify"> Hello! Welcome to my personal website! I am Ali Mazlumov who graduated from Industrial Engineering: Track in Computer Science at <a href="https://www.kaist.ac.kr/html/en/"> Korea Advanced Institute of Science and Technology (KAIST). </a> I completed my bachelor degree in February 2019. My academic advisor was <a href="https://aailab.kaist.ac.kr/xe2/members_professor/6749">Professor Il-Chul Moon  </a>. I am currently interested in machine learning</a>. 
+        </p>
+
+        <p align="justify">I love reading machine learning papers on <a href="http://www.arxiv-sanity.com/">Arxiv Sanity</a> and am always keen on learning something new! I also work on iOS and Android development.
+        </p>
+        <p align=center>
+          <a href="mailto:ali.mazlumov@kaist.ac.kr">E-mail</a> &nbsp|&nbsp
+          <a href="cv.pdf">CV</a> &nbsp|&nbsp
+          <!-- <a href="JonBarron-bio.txt">Blog</a> &nbsp|&nbsp -->
+<!--           <a href="https://scholar.google.com/citations?user=6zkTbN4AAAAJ&hl=en">Google Scholar</a> -->
+<!--           &nbsp|&nbsp -->
+          <a href="https://www.linkedin.com/in/ali-mazlumov-730a6586/"> LinkedIn </a> &nbsp|&nbsp
+          <a href="https://github.com/ali1299"> Github </a> &nbsp|&nbsp
+          <a href="https://www.facebook.com/ali.mazlumov"> Facebook </a> &nbsp|&nbsp
+          <a href="https://twitter.com/AliMazlumov"> Twitter </a> &nbsp|&nbsp
+          <a href="https://github.com/ali1299/website1/website1"> Website1 </a> 
+<!--           <a href="https://twitter.com/AliMazlumov"> Website2 </a>  -->
+	
+<!-- 	  <a href="https://abhoi.github.io/blog/"> Blog </a> -->
+        </p>
+        </td>
+        <td width="33%">
+        <img class="profile-pic" src="20130842.jpg">
+        <center>
+        <img src="kaist1.jpg" width=100%>
+        </center>
+        </td>
+      </tr>
+      </table>
+      
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tr>
+        <td width="100%" valign="middle">
+          <heading>Research Interests</heading>
+          <p align="justify">
+          Currently I am interested in computer vision, image processing, machine learning, optimization, artificial intelligence, artificial neural networks, deep learning, reinforcement learning, image recognition, natural language processing, computer systems, databases. 
+          </p>
+        </td>
+      </tr>
+      </table>
+
+
+
+<!--   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <tr>
+    <td>
+    <heading>Projects</heading>
+    </td>
+  </tr>
+  </table>
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tr onmouseout="iris_stop()" onmouseover="iris_start()" >
+          <td width="25%">
+            <div class="one">
+            <div class="two" id = 'iris_image'><img class="portrait_image" src='projects/iris/after.gif'></div>
+            <img class="portrait_image" src='projects/iris/after.gif'>
+            </div>
+            <script type="text/javascript">
+            function iris_start() {
+            document.getElementById('iris_image').style.opacity = "1";
+            }
+            function iris_stop() {
+            document.getElementById('iris_image').style.opacity = "0";
+            }
+            ocr_stop()
+            </script>
+          </td>
+          <td valign="top" width="75%">
+        <a href="https://github.com/titu1994/Advanced_Machine_Learning">
+                <papertitle>Iris: Speech to Code Converter</papertitle>
+        </a>
+        <br>
+            <strong>Amlaan Bhoi</strong>,
+              <a href="https://www.linkedin.com/in/shubadra-govindan/">Shubadra Govindan</a>,
+              <a href="https://sandeepjoshi1910.github.io/">Sandeep Joshi</a>,
+              <a href="https://dkaushik94.github.io">Debojit Kaushik</a>
+          <br>
+            <em>HackHarvard, 2018</em><br>
+            <a href="https://devpost.com/software/iris-1f36ns">devpost</a>
+            |
+            <a href="https://github.com/abhoi/Speech2Code/">code</a>
+            <p align="justify">A semantic speech to code generator.</p>
+            <ul>
+            <li>Trained an intent classification model in Microsoft LUIS to recognize 15+ commands.</li>
+            <li>Implemented a message passing protocol using RabbitMQ to talk between backend scripts, ElectronJS, and Visual Code extension.</li>
+            <li>Wrote Python API wrappers for Microsoft LUIS and Google Cloud Speech API.</li>
+        </ul>
+          </td>
+        </tr>
+ -->
+
+     
+  </body>
+</html>
