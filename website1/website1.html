@@ -1,440 +1,112 @@
-<!DOCTYPE html>
-<html class="gr__wwbm_com mdl-js">
+<!doctype html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>“Who Wants to Be a Millionaire?” – play the free online game</title>
-    <meta name="description" content="Test your knowledge at free online game based on the famous TV quiz show , give the correct answers, and win some amazing prizes!" />
-    <meta name="keywords" content="who wants to be a millionaire, free game, online game" />
-    <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="https://wwbm.com/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/flipclock.css">
-    <link rel="stylesheet" type="text/css" href="/css/fix.css">
+<base href="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="The smash hit game! Control your cell and eat other players to grow larger! Play with millions of players around the world and try to become the biggest cell of all!">
+<meta name="keywords" content="agario, agar, io, cell, cells, virus, bacteria, blob, game, games, web game, html5, fun, flash">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta property="fb:app_id" content="677505792353827" />
+<meta property="og:title" content="Agar.io " />
+<meta property="og:description" content="The smash hit game! Control your cell and eat other players to grow larger! Play with millions of players around the world and try to become the biggest cell of all!" />
+<meta property="og:url" content="http://agar.io/" />
+<meta property="og:image" content="http://agar.io/img/1200x630.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:type" content="website" />
+<meta property="al:ios:url" content="com.miniclip.agar.io://">
+<meta property="al:ios:app_store_id" content="995999703">
+<meta property="al:ios:app_name" content="Agar.io">
+<meta property="al:android:url" content="com.miniclip.agar.io://">
+<meta property="al:android:app_name" content="Agar.io">
+<meta property="al:android:package" content="com.miniclip.agar.io">
+<title>Agar.io</title>
+<link rel="canonical" href="http://agar.io/" />
+<link id="favicon" rel="icon" type="image/png" href="favicon-32x32.png" />
+<script>
+const EnvConfig = {
+	env_local: "false",
+	env_production: "true",
+    fb_app_id: "677505792353827",
+    ga_trackingId: "UA-62402209-1",
+    google_client_id: "686981379285-oroivr8u2ag1dtm3ntcs6vi05i3cpv0j.apps.googleusercontent.com",
+    gift_object_id: "1666759370208394",
 
-    <script src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/help.js"></script>
-    <script type="text/javascript" src="/js/init.js"></script>
+    master_url: "https://webbouncer-live-v6-0.agario.miniclippt.com",
+    socketEndpoint: "",
+    xsolla_endpoint: "https://payments.agario.miniclippt.com",
+    fb_endpoint: "https://rewardcallback-live.agario.miniclippt.com/payments/facebook",
+    game_url: "http://agar.io",
+    supersonic_app_key: "416358b5",
+    tap_research_api_key: "f2b4fd7d3dd1a7d871d79cdb1330c5ef",
+    // =======================================
+    // Configurations
+    config_url: "https://configs-web.agario.miniclippt.com/live/v12",
+    custom_skins_url: "https://configs.agario.miniclippt.com/live/custom_skins/",
+    load_local_configuration: "false",
+    configID: "1317",
+	configVersion: "12",
 
-        <meta name="google-site-verification" content="lVGKi2iVZnZjY6oItQTzc3jTnVXbFIX2w5ehxvwJdhA" />
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+	//Bacon
+	bacon_url: "https://bacon.agario.miniclippt.com/v1.0",
 
-   ym(42087149, "init", {
-        id:42087149,
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
+    //Miniclip SDK - Analytics
+    goliathUrl: "",
+    apiKey: "19ca7403-1994-11e9-b312-06a2aa13cf6c",
+    checksumKey: "19ca7e8a-1994-11e9-b312-06a2aa13cf6c",
+    analyticsEnv: "production",
+
+    //New Relic
+    NR_licenseKey: "",
+    NR_applicationID: "",
+
+    datadog_appid: 'agar.io.web',
+    datadog_env: 'production',
+
+    currentEnv: "production"
+}
+window.EnvConfig = EnvConfig;
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/42087149" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter --></head>
+<script type="text/javascript">window.presetGameMode=":ffa"</script>
+<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],window.googletag=googletag</script>
+<script src="//www.googletagservices.com/tag/js/gpt.js">googletag.pubads().disableInitialLoad(),window.googletag=googletag</script>
+<script>!function(a,e,n,g,t,c,o){a.GoogleAnalyticsObject=t,a.ga=a.ga||function(){(a.ga.q=a.ga.q||[]).push(arguments)},a.ga.l=1*new Date,c=e.createElement(n),o=e.getElementsByTagName(n)[0],c.async=1,c.src="//www.google-analytics.com/analytics.js",o.parentNode.insertBefore(c,o)}(window,document,"script",0,"ga"),ga("create",EnvConfig.ga_trackingId,"auto"),ga("send","pageview"),window.ga=ga</script>
+<script>!function(e,n,t,c,o,a,f){e.fbq||(o=e.fbq=function(){o.callMethod?o.callMethod.apply(o,arguments):o.queue.push(arguments)},e._fbq||(e._fbq=o),(o.push=o).loaded=!0,o.version="2.0",o.queue=[],(a=n.createElement(t)).async=!0,a.src="//connect.facebook.net/en_US/fbevents.js",(f=n.getElementsByTagName(t)[0]).parentNode.insertBefore(a,f))}(window,document,"script"),fbq("init","859937640783233"),fbq("track","PageView")</script>
+<noscript><img class="pixel-ad" style="display:none" src="https://www.facebook.com/tr?id=859937640783233&ev=PageView&noscript=1"/></noscript>
+<script type="text/javascript">function getUrlVars(){for(var r,e=[],i=window.location.href.slice(window.location.href.indexOf("?")+1).split("&"),n=0;n<i.length;n++)r=i[n].split("="),e.push(r[0]),e[r[0]]=r[1];return e}window.isChrome=/chrome/.test(navigator.userAgent.toLowerCase()),window.ASSETS_ROOT="";var queryVars=getUrlVars();null!=queryVars.v&&(window.location="/v"+queryVars.v);var rpx_params={kw:"",visitor:{},inventory:{}};window.___gcfg={lang:"en-US",parsetags:"explicit"}</script>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet">
+<link href="css/styles.859659066f96bb0fc251.css" rel="stylesheet">
+<script type="text/javascript" src="bundle_commons.7a59e9fc36ff2b46a9e4.js"></script>
+<script type="text/javascript" src="bundle_start.859659066f96bb0fc251.js"></script>
+<script type="text/javascript" src="mc/agario.js?v=18da022c85da01bcb85ff58eed623256"></script>
+<script>!function(e,n,o,c,t,i,a){e[o]=e[o]||function(){2===arguments.length&&(e[o].q=e[o].q||[]).push(arguments)},e.MCApolloPageView=e[o],i=n.createElement("script"),a=n.getElementsByTagName("script")[0],i.async=0,e.mc_ap_pv_c_n="agar.io",i.src="//apollo.miniclip.com/v1/js",a.parentNode.insertBefore(i,a)}(window,document,"Apollo")</script>
+</head>
 <body>
-        <div class="wrapper" id="game">
-
-        <div class="section1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h1>Game “Who Wants to Be a Millionaire?” - Free online US version</h1>
-                        <div class="block_text read-more">
-                            <p>Welcome to the free online version of the award-winning game show <strong>&ldquo;Who Wants to Be a Millionaire?&rdquo;</strong>.&nbsp;The show has aired for nearly two decades and produced an impressive list of instant-millionaires. And now the free online version offers everyone the same chance to succeed in turning knowledge into real wealth.</p>
-
-<p>The game is open to anyone willing to put their knowledge to the test in a series of questions and answers. Just keep your wits about you, have fun, and get rich! So if you&rsquo;re in the mood to make a quick million dollars for yourself, this is your chance.</p>
-
-<div class="hidd_mob">
-<p>The game consists of 15 questions. The level of difficulty increases with each question, and so does your potential wealth. For example, if you answer the first question correctly your prize money goes from $100 to $1000. As you work your way through the questions by supplying the correct answers your riches grow exponentially until you reach the final question - and if you answer it correctly you will succeed in making a million dollars!</p>
-
-<p>Keep in mind that your intellect and knowledge are the keys to success. Think you&rsquo;ve got what it takes? Then go ahead and play! Put all those random facts you&rsquo;ve collected over the years to good use and turn it into a quick and easy million dollars.</p>
+<main style="display:none">
+<h1></h1>
+<p>The smash hit game! Control your cell and eat other players to grow larger! Play with millions of players around the world and try to become the biggest cell of all!</p>
+</main>
+<div id="fb-root"></div>
+<script>!function(e,t,n){var c,o=e.getElementsByTagName(t)[0];e.getElementById(n)||((c=e.createElement(t)).id=n,c.src="//connect.facebook.net/en_US/sdk.js",o.parentNode.insertBefore(c,o))}(document,"script","facebook-jssdk")</script>
+<div id="background"></div>
+<canvas id="canvas"></canvas>
+<div id="home">
 </div>
-                            <a href="https://wwbm.com/#" class="hidd_text">Read more</a>
-                        </div>
-
-                    </div>
-                </div>
-            </div><!--container-->
-        </div><!--section1-->
-        <div class="section2">
-            <div class="container container_pl">
-                <div class="row">
-                    <div class="col-xs-5 col-md-4 block_menu">
-                       <ul class="menu">
-        <li><a href="https://wwbm.com">Main</a></li>
-        <li><a href="https://wwbm.com/history">History</a></li>
-        <li><a href="https://wwbm.com/rules">Rules</a></li>
-    </ul>                    </div>
-                    <div class="col-xs-12 col-md-8">
-                        <div class="choose_country">
-                            <div class="choose_country-current"><span class="choose_country-icon choose_country-icon_usa"></span> USA</div>
-                            <div class="choose_country-list">
-                                <!--<a href="#" class="choose_country-item"><span class="choose_country-icon choose_country-icon_de"></span> Deutschland</a>
-                                <a href="#" class="choose_country-item"><span class="choose_country-icon choose_country-icon_sp"></span> Spain</a>-->
-                                <a href="https://uk.wwbm.com/" class="choose_country-item"><span class="choose_country-icon choose_country-icon_uk"></span> UK</a>
-                                <!--<a href="#" class="choose_country-item"><span class="choose_country-icon choose_country-icon_it"></span> Italy</a>
-                                <a href="#" class="choose_country-item"><span class="choose_country-icon choose_country-icon_fr"></span> France</a> -->
-                                <a href="https://ru.wwbm.com/" class="choose_country-item"><span class="choose_country-icon choose_country-icon_ru"></span> Россия</a>
-                                <a href="https://ua.wwbm.com/" class="choose_country-item"><span class="choose_country-icon choose_country-icon_ua"></span> Україна</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--container-->
-        </div><!--section2-->
-        <div class="section3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="banner970">
-                            
-
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <ins class="adsbygoogle"
-                                 style="display:block;width: 100%"
-                                 data-ad-client="ca-pub-3097086709466639"
-                                 data-ad-slot="5228797955"
-                                 data-ad-format="auto"
-                                 data-full-width-responsive="true"></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
-
-                        </div>
-                    </div>
-                </div>
-            </div><!--container-->
-        </div>
-
-        <div class="section4">
-            <div class="container container_pl">
-                <div class="row block_control">
-                    <div class="col-xs-6 col-md-6 button_block">
-                        <div class="wrap_btn_help" id="help" v-bind:style="[style.help]">
-                            <a id="help1" class="btn_help btn_help1"
-                               v-on:click.once.prevent="useHelp('h5050')"
-                               v-bind:class="[help.h5050.used ? 'used activ' : '']"></a>
-                            <a id="help2" class="btn_help btn_help2"
-                               v-on:click.stop.prevent="useHelp('hallHelp')"
-                               v-bind:class="[help.hallHelp.used ? 'used activ' : '']"></a>
-                            <a  id="help3" class="btn_help btn_help3"
-                               v-on:click.stop.prevent="useHelp('callFriend')"
-                               v-bind:class="[help.callFriend.used ? 'used activ' : '']"></a></div>
-                        <div class="logo"><img src="./images/logo.png" alt=""></div>
-                    </div>
-                    <div class="col-xs-3 col-md-3 timer_block">
-                        <div class="ins_timer_block">
-                            <div class="wrap_volum"><i class="icon mute sound"
-                                v-bind:class="[muted ? 'off' : '']"></i></div>
-                            <div id="timer" v-bind:style="{display: style.displayTimer}" >
-
-                            </div>
-                            <div class="mobile-timer-wrap">
-                                <div class="timer-wrap">
-                                    <div class="mobile-timer flip-clock-wrapper">
-                                        <ul class="flip play">
-                                            <li class="flip-clock-before">
-                                                <a href="#">
-                                                    <div class="up">
-                                                        <div class="shadow"></div>
-                                                        <div class="inn">9</div>
-                                                    </div>
-                                                    <div class="down">
-                                                        <div class="shadow"></div>
-                                                        <div class="inn">9</div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="flip-clock-active">
-                                                <a href="#">
-                                                    <div class="up">
-                                                        <div class="shadow"></div>
-                                                        <div class="inn">0</div>
-                                                    </div>
-                                                    <div class="down">
-                                                        <div class="shadow"></div>
-                                                        <div class="inn">0</div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <ul class="flip play">
-                                            <li class="flip-clock-before">
-                                                <a href="#">
-                                                    <div class="up">
-                                                        <div class="shadow"></div>
-                                                        <div class="inn">9</div>
-                                                    </div>
-                                                    <div class="down">
-                                                        <div class="shadow"></div>
-                                                        <div class="inn">9</div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="flip-clock-active">
-                                                <a href="#">
-                                                    <div class="up">
-                                                        <div class="shadow"></div>
-                                                        <div class="inn">0</div>
-                                                    </div>
-                                                    <div class="down">
-                                                        <div class="shadow"></div>
-                                                        <div class="inn">0</div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <span>seconds</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-3 col-md-3 number_block">
-                        <span class="ins_number_block">
-                            <span class="arrow_nav_wrap">
-                                <a href="#" class="ar_up scroll-up"></a>
-                                <a href="#" class="ar_down scroll-down"></a>
-                            </span>
-                            <div class="shagi question_list">
-                                <div class="shag shag_line" v-bind:class="[level == 15 ? 'shag_activ' : '']"><span class="number1">15</span><span class="number2">$ 1 000 000</span></div>
-                                <div class="shag" v-bind:class="[level == 14 ? 'shag_activ' : '']"><span class="number1">14</span><span
-                                            class="number2">$  500 000</span></div>
-                                <div class="shag"  v-bind:class="[level == 13 ? 'shag_activ' : '']"><span class="number1">13</span><span
-                                            class="number2">$  250 000</span></div>
-                                <div class="shag" v-bind:class="[level == 12 ? 'shag_activ' : '']"><span class="number1">12</span><span
-                                            class="number2">$  125 000</span></div>
-                                <div class="shag" v-bind:class="[level == 11 ? 'shag_activ' : '']"><span class="number1">11</span><span class="number2">$  64 000</span></div>
-                                <div class="shag shag_line" v-bind:class="[level == 10 ? 'shag_activ' : '']"><span class="number1">10</span><span class="number2">$  32 000</span></div>
-                                <div class="shag" v-bind:class="[level == 9 ? 'shag_activ' : '']"><span class="number1">9</span><span class="number2">$  16 000</span></div>
-                                <div class="shag" v-bind:class="[level == 8 ? 'shag_activ' : '']"><span class="number1">8</span><span
-                                            class="number2">$  8 000</span></div>
-                                <div class="shag" v-bind:class="[level == 7 ? 'shag_activ' : '']"><span class="number1">7</span><span
-                                            class="number2">$  4 000</span></div>
-                                <div class="shag" v-bind:class="[level == 6 ? 'shag_activ' : '']"><span class="number1">6</span><span
-                                            class="number2">$  2 000</span></div>
-                                <div class="shag shag_line" v-bind:class="[level == 5 ? 'shag_activ' : '']"><span class="number1">5</span><span
-                                            class="number2">$  1 000</span></div>
-                                <div class="shag" v-bind:class="[level == 4 ? 'shag_activ' : '']"><span class="number1">4</span><span
-                                            class="number2">$  500</span></div>
-                                <div class="shag" v-bind:class="[level == 3 ? 'shag_activ' : '']"><span class="number1">3</span><span
-                                            class="number2">$  300</span></div>
-                                <div class="shag" v-bind:class="[level == 2 ? 'shag_activ' : '']"><span class="number1">2</span><span
-                                            class="number2">$  200</span></div>
-                                <div class="shag" v-bind:class="[level == 1 ? 'shag_activ' : '']"><span class="number1">1</span><span
-                                            class="number2">$  100</span></div>
-                            </div>
-                        </span>
-                    </div>
-                </div>
-            </div><!--container-->
-        </div><!--section4-->
-        <div class="section5">
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="col-xs-12 banner970">
-                        
-
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- WWBM.COM — DOWN -->
-                        <ins class="adsbygoogle"
-                             style="display:block"
-                             data-ad-client="ca-pub-3097086709466639"
-                             data-ad-slot="4177803682"
-                             data-ad-format="auto"
-                             data-full-width-responsive="true"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-
-                    </div>
-                </div>
-            </div><!--container-->
-        </div>
-        <div class="section6">
-            <div class="container  container_pl">
-                <div class="row">
-                  <div class="col-xs-12 question_answer" style="display: none" id="question_answer" v-if="gameInProcess">
-
-                        <div class="quest">
-                            <span>{{ question.question }}</span>
-                        </div>
-                        <div class="answ_block">
-
-                            <div class="answ_row clearfix">
-                                <div class="answ answer"
-                                     v-bind:class="[answer.selected == 1 ? 'my-answer' : '', answer.right == 1 ? 'corect' : '', inCheck ? '' : 'ahov' ]"
-                                     v-on:click="checkAnswer(1)">
-                                    <div class="answ_inside">
-                                        <div class="answ_text">
-                                            <span class="ans_1"><i></i>А:</span>
-                                            <span class="ans_2">{{ question.answers[0].answer }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="answ answer"
-                                     v-bind:class="[answer.selected == 2 ? 'my-answer' : '', answer.right == 2 ? 'corect' : '', inCheck ? '' : 'ahov' ]"
-                                     v-on:click="checkAnswer(2)">
-                                    <div class="answ_inside">
-                                        <div class="answ_text">
-                                            <span class="ans_1"><i></i>В:</span>
-                                            <span class="ans_2">{{ question.answers[1].answer }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="number_center">{{ level }}</div>
-                            <div class="answ_row clearfix">
-                                <div class="answ answer"
-                                     v-bind:class="[answer.selected == 3 ? 'my-answer' : '', answer.right == 3 ? 'corect' : '', inCheck ? '' : 'ahov' ]"
-                                     v-on:click="checkAnswer(3)">
-                                    <div class="answ_inside">
-                                        <div class="answ_text">
-                                            <span class="ans_1"><i></i>С:</span>
-                                            <span class="ans_2">{{ question.answers[2].answer }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="answ answer"
-                                     v-bind:class="[answer.selected == 4 ? 'my-answer' : '', answer.right == 4 ? 'corect' : '', inCheck ? '' : 'ahov' ]"
-                                     v-on:click="checkAnswer(4)"
-                                >
-                                    <div class="answ_inside">
-                                        <div class="answ_text">
-                                            <span class="ans_1"><i></i>D:</span>
-                                            <span class="ans_2">{{ question.answers[3].answer }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--container-->
-        </div><!--section6-->
-        <div class="section7">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="banner970">
-                            
-
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- WWBM.COM — LEFT -->
-                                <ins class="adsbygoogle"
-                                     style="display:inline-block;width: 336px;height: 280px;max-width: 100%;"
-                                     data-ad-client="ca-pub-3097086709466639"
-                                     data-ad-slot="4363428522"
-                                     data-ad-format="auto"
-                                     data-full-width-responsive="true"></ins>
-                                <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script>
-
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- WWBM.COM — RIGHT -->
-                                <ins class="adsbygoogle"
-                                     style="display:inline-block;width: 336px;height: 280px;max-width: 100%;"
-                                     data-ad-client="ca-pub-3097086709466639"
-                                     data-ad-slot="3106187171"
-                                     data-ad-format="auto"
-                                     data-full-width-responsive="true"></ins>
-                                <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script>
-
-                        </div>
-                    </div>
-                </div>
-            </div><!--container-->
-        </div>
-        <div class="section8">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="block_text read-more bottom-text">
-                            <h2>Welcome to the free online version of game show &ldquo;Who Wants to Be a Millionaire?&rdquo;</h2>
-
-<p>Welcome! You have reached the free online game based on the famous TV show &ldquo;Who Wants to Be a Millionaire?&rdquo;. We have developed the online game to be very similar to the original TV show. Players have the opportunity to make easy money if they correctly answer some (not always easy) questions.</p>
-
-<p>To stand the chance of getting rich with this online version of the show that creates instant-millionaires, we recommend that you carefully read the rules of the game. In order to succeed and reach the ultimate 15th question, you&rsquo;ll need a clear understanding of how the game works. You&rsquo;ll note that we also give away some fantastic consolation prizes on a weekly basis. So even if you don&rsquo;t make it all the way to your first million, you&rsquo;ll still have a lot of fun and be rewarded.</p>
-
-<div class="hidd_mob">
-<p>Note that you don&rsquo;t need to download this game &ndash; it can be played online on your favourite device (smart phone, tablet, etc.) at any time, free of charge. Playing online also offers contestants instant access to:</p>
-
-<ul>
-	<li>The <a href="/history">history</a> of the game;</li>
-	<li>The <a href="/rules">rules</a> of the game;</li>
-	<li>The chance to be part of the <a href="/">winners</a> rankings;</li>
-	<li>The ability to replenish your questions base;</li>
-</ul>
-
-<p>Should you have any questions, comments or suggestions related to this site, please feel free to contact us via e-mail, which you&rsquo;ll find in the &lsquo;Contacts&rsquo; section on this page. We enjoy hearing from you and will try our best respond as soon as possible. If you want to know more about our copyright material, please browse the articles in this section as it contains all the relevant information.</p>
-
-<p>We invite you to join us and play &ldquo;Who Wants to Be a Millionaire?&rdquo;&nbsp;online. You&rsquo;ll get bonuses for inviting friends and don&rsquo;t forget to subscribe to our newsletter in the &lsquo;Contacts&rsquo; section. It&rsquo;s a fantastic way to build your general knowledge and, if you&rsquo;re successful, make an easy million dollars!</p>
+<div class="font-family">&nbsp;</div>
+<script type="text/javascript" src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+<div id="adsGameOver">
+<video id="contentElement"></video>
 </div>
-                            <a href="#" class="hidd_text">Read more</a>
-                        </div>
-                      </div>
-                </div>
-            </div><!--container-->
-        </div><!--section8-->
-        <div class="section16">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="block_text">
-                    <h3>The knowledge-based game «Who Wants to Be a Millionaire?» is now available online. The game is aimed at knowledge enthusiasts who love an intellectual challenge. We invite you to play and earn your first million dollars with the power of your mind!</h3>
-                </div>
-            </div>
-        </div>
-    </div><!--container-->
-</div><!--section16-->
-
-<div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="copy">2019 © Online-game «Who Wants to Be a Millionaire?» - play free!</div>
-            </div>
-        </div>
-    </div><!--container-->
-</div><!--footer-->        <div class="audio-player">
-            <audio autoplay="true" loop="false" v-bind:muted="muted">
-                <source id="ogg_src" src="" type="audio/ogg">
-                <source id="mp3_src" src="" type="audio/mp3">
-            </audio>
-        </div>
-    </div>
-
-    <div class="modal">
-        <div class="modal_bg"></div>
-        <div class="modal-content">
-
-
-        </div>
-    </div>
-
-    <script>
-        var second_lang = "second";
-        var seconds_lang = "seconds";
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"
-            integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="js/vueapp.js"></script>
-    <script type="text/javascript" src="./js/jquery.countdown360.js"></script>
-
-    <script type="text/javascript" src="/js/main.js"></script>
-    <script src="./js/flipclock.min.js"></script>
-    <script src="./js/functions.js"></script>
-
-
+<div id="captchaWindow">
+<div id="verifyUser"></div>
+</div>
+<div id="div-gpt-ad-1528792429656-0" class="pixel-ad" style="display:none"></div>
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=e34c6330-b746-4fbd-a9f7-642ee8fbed1c"></script>
+<script src="agario.core.js?v=58c725e28f647471d9ec5b9925f1e70d"></script>
+<script type="text/javascript" src="bundle_end.347dddb507895cde10c3.js"></script>
+<script src="https://www.google-analytics.com/cx/api.js?experiment=mpvbHnN-QF2vR9SGzcIcRQ"></script>
 </body>
 </html>
