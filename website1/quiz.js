@@ -80,127 +80,128 @@
     question: "The word is 이, what is the correct translation?",
     options: ["this", "that", "appropriate", "store"],
     answer: 0
-  },{
-    question: "The word is 아주, what is the correct translation?",
-    options: ["movie", "very", "well", "store"],
-    answer: 1
-  },{
-    question: "The word is 한, what is the correct translation?",
-    options: ["listening", "man", "woman", "one"],
-    answer: 3
-  },{
-    question: "The word is 초급, what is the correct translation?",
-    options: ["beginner", "hospital", "restaurant", "person"],
-    answer: 0
-  },{
-    question: "The word is 두, what is the correct translation?",
-    options: ["store", "movie", "two", "time"],
-    answer: 2
-  },{
-    question: "The word is 고르십시오, what is the correct translation?",
-    options: ["choose", "listening", "why", "Korea"],
-    answer: 0
-  },{
-    question: "The word is 책, what is the correct translation?",
-    options: ["yesterday", "book", "appropriate", "hospital"],
-    answer: 1
-  },{
-    question: "The word is 듣기, what is the correct translation?",
-    options: ["different", "we", "listening", "school"],
-    answer: 2
-  },{
-    question: "The word is 나, what is the correct translation?",
-    options: ["movie", "I", "listening", "now"],
-    answer: 1
-  },{
-    question: "The word is 같은, what is the correct translation?",
-    options: ["together", "why", "same", "school"],
-    answer: 2
-  },{
-    question: "The word is 제, what is the correct translation?",
-    options: ["today", "contents", "hospital", "my"],
-    answer: 3
-  },{
-    question: "The word is 어제, what is the correct translation?",
-    options: ["no", "again", "two", "yesterday"],
-    answer: 3
-  },{
-    question: "The word is 답하십시오, what is the correct translation?",
-    options: ["and", "together", "book ", "answer"],
-    answer: 3
-  },{
-    question: "The word is 사람, what is the correct translation?",
-    options: ["same", "person", "that", "time"],
-    answer: 1
-  },{
-    question: "The word is 집, what is the correct translation?",
-    options: ["house", "appropriate", "next", "different"],
-    answer: 0
-  },{
-    question: "The word is 많은, what is the correct translation?",
-    options: ["many", "person", "house", "together"],
-    answer: 0
-  },{
-    question: "The word is 이해, what is the correct translation?",
-    options: ["restaurant", "store", "contents", "understand"],
-    answer: 3
-  },{
-    question: "The word is 읽고, what is the correct translation?",
-    options: ["read", "no", "article", "beginner"],
-    answer: 0
-  },{
-    question: "The word is 병원, what is the correct translation?",
-    options: ["hospital", "we", "why", "again"],
-    answer: 0
-  },{
-    question: " The word is 글의, what is the correct translation?",
-    options: ["movie", "house", "man", "article"],
-    answer: 3
-  },{
-    question: "The word is 저, what is the correct translation?",
-    options: ["that", "appropriate", "one", "again"],
-    answer: 0
-  },{
-    question: "The word is 지금, what is the correct translation?",
-    options: ["now", "I", "food", "read"],
-    answer: 0
-  },{
-    question: "The word is 한국, what is the correct translation?",
-    options: ["food", "Korea", "woman", "restaurant"],
-    answer: 1
-  },{
-    question: "The word is 음식, what is the correct translation?",
-    options: ["hospital", "answer", "again", "food"],
-    answer: 3
-  },{
-    question: "The word is 영화, what is the correct translation?",
-    options: ["yesterday", "movie", "why", "listening"],
-    answer: 1
-  },{
-    question: "The word is 다른, what is the correct translation?",
-    options: ["appropriate", "different", "contents", "school"],
-    answer: 1
-  },{
-    question: "The word is 가게, what is the correct translation?",
-    options: ["quickly", "store", "school", "beginner"],
-    answer: 1
-  },{
-    question: "The word is 함께, what is the correct translation?",
-    options: ["together", "listening", "family", "answer"],
-    answer: 0
-  },{
-    question: "The word is 네, what is the correct translation?",
-    options: ["school", "understand", "answer", "yes"],
-    answer: 3
-  },{
-    question: "The word is 여자, what is the correct translation?",
-    options: ["beginner", "woman", "Korea", "tomorrow"],
-    answer: 1
-  },{
-    question: "The word is 내용, what is the correct translation?",
-    options: ["time", "contents", "name", "tomorrow"],
-    answer: 0
-    }];
+  }];
+//                       {
+//     question: "The word is 아주, what is the correct translation?",
+//     options: ["movie", "very", "well", "store"],
+//     answer: 1
+//   },{
+//     question: "The word is 한, what is the correct translation?",
+//     options: ["listening", "man", "woman", "one"],
+//     answer: 3
+//   },{
+//     question: "The word is 초급, what is the correct translation?",
+//     options: ["beginner", "hospital", "restaurant", "person"],
+//     answer: 0
+//   },{
+//     question: "The word is 두, what is the correct translation?",
+//     options: ["store", "movie", "two", "time"],
+//     answer: 2
+//   },{
+//     question: "The word is 고르십시오, what is the correct translation?",
+//     options: ["choose", "listening", "why", "Korea"],
+//     answer: 0
+//   },{
+//     question: "The word is 책, what is the correct translation?",
+//     options: ["yesterday", "book", "appropriate", "hospital"],
+//     answer: 1
+//   },{
+//     question: "The word is 듣기, what is the correct translation?",
+//     options: ["different", "we", "listening", "school"],
+//     answer: 2
+//   },{
+//     question: "The word is 나, what is the correct translation?",
+//     options: ["movie", "I", "listening", "now"],
+//     answer: 1
+//   },{
+//     question: "The word is 같은, what is the correct translation?",
+//     options: ["together", "why", "same", "school"],
+//     answer: 2
+//   },{
+//     question: "The word is 제, what is the correct translation?",
+//     options: ["today", "contents", "hospital", "my"],
+//     answer: 3
+//   },{
+//     question: "The word is 어제, what is the correct translation?",
+//     options: ["no", "again", "two", "yesterday"],
+//     answer: 3
+//   },{
+//     question: "The word is 답하십시오, what is the correct translation?",
+//     options: ["and", "together", "book ", "answer"],
+//     answer: 3
+//   },{
+//     question: "The word is 사람, what is the correct translation?",
+//     options: ["same", "person", "that", "time"],
+//     answer: 1
+//   },{
+//     question: "The word is 집, what is the correct translation?",
+//     options: ["house", "appropriate", "next", "different"],
+//     answer: 0
+//   },{
+//     question: "The word is 많은, what is the correct translation?",
+//     options: ["many", "person", "house", "together"],
+//     answer: 0
+//   },{
+//     question: "The word is 이해, what is the correct translation?",
+//     options: ["restaurant", "store", "contents", "understand"],
+//     answer: 3
+//   },{
+//     question: "The word is 읽고, what is the correct translation?",
+//     options: ["read", "no", "article", "beginner"],
+//     answer: 0
+//   },{
+//     question: "The word is 병원, what is the correct translation?",
+//     options: ["hospital", "we", "why", "again"],
+//     answer: 0
+//   },{
+//     question: " The word is 글의, what is the correct translation?",
+//     options: ["movie", "house", "man", "article"],
+//     answer: 3
+//   },{
+//     question: "The word is 저, what is the correct translation?",
+//     options: ["that", "appropriate", "one", "again"],
+//     answer: 0
+//   },{
+//     question: "The word is 지금, what is the correct translation?",
+//     options: ["now", "I", "food", "read"],
+//     answer: 0
+//   },{
+//     question: "The word is 한국, what is the correct translation?",
+//     options: ["food", "Korea", "woman", "restaurant"],
+//     answer: 1
+//   },{
+//     question: "The word is 음식, what is the correct translation?",
+//     options: ["hospital", "answer", "again", "food"],
+//     answer: 3
+//   },{
+//     question: "The word is 영화, what is the correct translation?",
+//     options: ["yesterday", "movie", "why", "listening"],
+//     answer: 1
+//   },{
+//     question: "The word is 다른, what is the correct translation?",
+//     options: ["appropriate", "different", "contents", "school"],
+//     answer: 1
+//   },{
+//     question: "The word is 가게, what is the correct translation?",
+//     options: ["quickly", "store", "school", "beginner"],
+//     answer: 1
+//   },{
+//     question: "The word is 함께, what is the correct translation?",
+//     options: ["together", "listening", "family", "answer"],
+//     answer: 0
+//   },{
+//     question: "The word is 네, what is the correct translation?",
+//     options: ["school", "understand", "answer", "yes"],
+//     answer: 3
+//   },{
+//     question: "The word is 여자, what is the correct translation?",
+//     options: ["beginner", "woman", "Korea", "tomorrow"],
+//     answer: 1
+//   },{
+//     question: "The word is 내용, what is the correct translation?",
+//     options: ["time", "contents", "name", "tomorrow"],
+//     answer: 0
+//     }];
     
     
     
