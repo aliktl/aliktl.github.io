@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html style="height:100%">
 
 <head>
-    <meta charset="UTF-8">
-    <title>MakeCode Playground</title>
-    <meta name="Description" content="" />
+
+    <link data-inline="yes-please" href="/static/playground/spinner.css" rel="stylesheet" />
 
     <!-- include playground-head.html -->
 <!-- @include meta.html -->
@@ -17,37 +16,39 @@
 <!-- end include -->
 
 
-    <link data-inline="yes-please" href="/static/playground/spinner.css" rel="stylesheet" />
-    <link data-inline="yes-please" href="/static/playground/playground.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background: #F9F9F9;
+        }
 
-    <link data-name="vs/editor/editor.main" rel="stylesheet" href="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.css">
+        #svg {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .blocklyPreview {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 1em);
+            max-height: calc(100% - 1em);
+            padding: 10px;
+        }
+
+        path.blocklyFlyoutBackground {
+            fill: #5f6c79 !important;
+            rx: 0 !important;
+            ry: 0 !important;
+        }
+    </style>
 </head>
 
-<body class="playground-page">
-    <pre data-preload="/playground/samples/basic/hello-world/sample.ts"></pre>
-
-    <nav class="ui menu inverted fixed borderless">
-        <div class="menu left">
-            <div class="ui item">
-                MakeCode Playground
-            </div>
-        </div>
-
-        <div class="menu right">
-            <a href="/docs" class="ui item">
-                Home
-            </a>
-            <a href="/playground" class="ui item">
-                Playground
-            </a>
-            <a href="/defining-blocks" class="ui item">
-                Help defining blocks
-            </a>
-            <a href="https://github.com/Microsoft/pxt-sample" class="ui item" style="background-color:black">
-                Sample target
-            </a>
-        </div>
-    </nav>
+<body>
     <div id="loading">
         <div class="spinner">
             <div class="rect1"></div>
@@ -58,85 +59,164 @@
         </div>
     </div>
 
-    <section id="playground">
-    </section>
+    <div id="svg"></div>
 
-    <footer class="ui footer">
-        <hr>
-        <p class="text-center">
-            <small>&copy; 2019 Microsoft</small>
-        </p>
-    </footer>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
-        crossorigin="anonymous"></script>
-
-    <!-- include playground-apptrackingweb.html -->
-<script type="text/javascript" src="https://pxt.azureedge.net/blob/795d8506c80a04f5ca26f577a8d6152e2fa3e7a6/doccdn/pxtweb.js"></script>
+    <!-- include playground-workers.html -->
+<script src="https://pxt.azureedge.net/blob/b96c6190efd88eef69193a45e790f2c5b6cd7744/doccdn/pxtworker.js"></script>
+<script src="https://pxt.azureedge.net/blob/7735e613f88068f46503f6789c3e35ae328d4cdb/doccdn/pxtsim.js"></script>
+<script src="https://pxt.azureedge.net/blob/077e111742e08cc8571a1721a0a2ee0d10447969/doccdn/pxtblockly.js"></script>
 <!-- end include -->
 
-    <!-- include apptracking.html -->
-<script type="text/javascript">
-    window.loadAppInsights = function (includeCookie) {
-        var appInsights=window.appInsights||function(config){
-            function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
-        }({
-            instrumentationKey:"9801ed01-c40f-46ec-aa40-2a1742a9e71c",
-            disableAjaxTracking: true,
-            overridePageViewDuration: false,
-            disableExceptionTracking: true,
-            isCookieUseDisabled: !includeCookie,
-            isStorageUseDisabled: !includeCookie,
-            url: "/blb/ai.0.js"
+
+    <script src="https://pxt.azureedge.net/blob/d6deb6c607a3067428e1343c9c7ab84e2d2af15f/static/playground/testHost.js"></script>
+
+    <script type="text/javascript">
+
+        pxt.webConfig = {};
+        pxt.webConfig.commitCdnUrl = '../static/playground/';
+
+        // Just needs to exist
+        pxt.setAppTarget({
+            id: "core",
+            name: "Microsoft MakeCode",
+            title: "Microsoft MakeCode",
+            versions: undefined,
+            description: "A toolkit to build JavaScript Blocks editors.",
+            bundleddirs: [],
+            compile: {
+                isNative: false,
+                hasHex: false,
+                jsRefCounting: true,
+                floatingPoint: true
+            },
+            bundledpkgs: {},
+            appTheme: {},
+            tsprj: undefined,
+            blocksprj: undefined,
+            runtime: {
+                pauseUntilBlock: { category: "Loops", color: "0x0000ff" }
+            },
+            corepkg: undefined
         });
-        window.appInsights=appInsights;
-        appInsights.queue.push(function () {
-            appInsights.context.addTelemetryInitializer(function (envelope) {
-                if (typeof pxtConfig === "undefined") return;
-                var telemetryItem = envelope.data.baseData;
-                telemetryItem.properties = telemetryItem.properties || {};
-                telemetryItem.properties["target"] = pxtConfig.targetId;
-                telemetryItem.properties["stage"] = (pxtConfig.relprefix || "/--").replace(/[^a-z]/ig, '')
-                telemetryItem.properties["cookie"] = includeCookie;
-                if (typeof Windows !== "undefined")
-                    telemetryItem.properties["WindowsApp"] = 1;
-                var userAgent = navigator.userAgent.toLowerCase();
-                var userAgentRegexResult = /\belectron\/(\d+\.\d+\.\d+.*?)(?: |$)/i.exec(userAgent); // Example navigator.userAgent: "Mozilla/5.0 Chrome/61.0.3163.100 Electron/2.0.0 Safari/537.36"
-                if (userAgentRegexResult) {
-                    telemetryItem.properties["Electron"] = 1;
-                    telemetryItem.properties["ElectronVersion"] = userAgentRegexResult[1];
-                }
-                if (typeof pxtElectron !== "undefined") {
-                    telemetryItem.properties["PxtElectron"] = 1;
-                    telemetryItem.properties["ElectronVersion"] = pxtElectron.versions.electronVersion;
-                    telemetryItem.properties["ChromiumVersion"] = pxtElectron.versions.chromiumVersion;
-                    telemetryItem.properties["NodeVersion"] = pxtElectron.versions.nodeVersion;
-                    telemetryItem.properties["PxtElectronVersion"] = pxtElectron.versions.pxtElectronVersion;
-                    telemetryItem.properties["PxtCoreVersion"] = pxtElectron.versions.pxtCoreVersion;
-                    telemetryItem.properties["PxtTargetVersion"] = pxtElectron.versions.pxtTargetVersion;
-                    telemetryItem.properties["PxtElectronIsProd"] = pxtElectron.versions.isProd;
-                }
-            });
+
+        window.addEventListener("message", function (ev) {
+            var msg = ev.data;
+            handleMessage(msg.js, msg.common, msg.helpers);
         });
-        appInsights.trackPageView(null, scrubUrl(window.location.toString()), {urlReferrer: scrubUrl(document.referrer.toString())});
 
-        //Scrub the key (if any) from the URL.
-        function scrubUrl(url) {
-            var scriptIdRegex = /(?:\d{5}-\d{5}-\d{5}-\d{5})|(?:_[0-9a-zA-Z]{12})/g;
-            return url.replace(scriptIdRegex, "xxxxx-xxxxx-xxxxx-xxxxx");
-        }
-    }
-    pxt.initAnalyticsAsync();
-</script>
-<!-- end include -->
+        var handleMessage = function (js, common, helpers) {
+            if (js) {
+                // Get opts
+                var dependency = undefined;
+                var pkg = new pxt.MainPackage(new TestHost("test-pkg", "// TODO", dependency ? [dependency] : [], true));
 
-    <script>var require = { paths: { 'vs': 'https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs' } };</script>
-    <script src="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/loader.js"></script>
-    <script src="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
-    <script src="https://microsoft.github.io/monaco-editor/node_modules/monaco-editor/min/vs/editor/editor.main.js"></script>
+                pkg.getCompileOptionsAsync()
+                    .then(opts => cachedOpts = opts)
+                    .then(opts => {
+                        opts.fileSystem["main.ts"] = ' ';
+                        opts.fileSystem["custom.ts"] = js;
+                        opts.fileSystem["pxt-core.d.ts"] = common;
+                        opts.fileSystem["pxt-helpers.ts"] = helpers;
+                        opts.ast = true;
+                        opts.testMode = true;
+                        opts.ignoreFileResolutionErrors = true;
 
-    <script data-inline="yes-please" src="https://pxt.azureedge.net/blob/438a9e55a58241c5c58eca69384595adba565864/static/playground/samples/all.js" type="text/javascript"></script>
-    <script data-inline="yes-please" src="https://pxt.azureedge.net/blob/721a61bbd3ff61db486da102d25c7dc7b49dab4b/static/playground/playground.js" type="text/javascript"></script>
+                        var resp = pxtc.compile(opts);
+                        if (!resp.success) {
+                            console.log('error: ', resp);
+                            return;
+                        }
+
+                        var file = resp.ast.getSourceFile("main.ts");
+                        var apiInfo = pxtc.getApiInfo(opts, resp.ast);
+                        var blockInfo = pxtc.getBlocksInfo(apiInfo);
+
+                        // Initialize blocks in Blockly
+                        pxt.blocks.initialize(blockInfo);
+
+                        // Inject blocks
+                        var nsMap = {};
+                        pxt.blocks.injectBlocks(blockInfo).forEach(fn => {
+                            let ns = (fn.attributes.blockNamespace || fn.namespace).split('.')[0];
+                            ns = ns.toLowerCase();
+
+                            if (!nsMap[ns]) {
+                                nsMap[ns] = [];
+                            }
+                            nsMap[ns].push(fn);
+                        });
+
+                        delete nsMap['math'];
+                        delete nsMap['arrays'];
+                        delete nsMap['text'];
+
+                        var blocksDiv = document.createElementNS('http://www.w3.org/1999/xhtml', 'xml');
+                        blocksDiv.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml');
+                        var xmlList = [];
+
+                        Object.keys(nsMap).forEach(k => {
+                            var ns = k;
+                            var blocks = nsMap[ns];
+
+                            // Go through every block and get it's toolbox xml. 
+                            blocks.forEach(fn => {
+                                if (fn.attributes.debug && !pxt.options.debug) return;
+                                if (fn.attributes.deprecated || fn.attributes.blockHidden) return;
+                                try {
+                                    let comp = pxt.blocks.compileInfo(fn);
+                                    blockXml = pxt.blocks.createToolboxBlock(blockInfo, fn, comp);
+                                    blocksDiv.appendChild(blockXml);
+                                    xmlList.push(blockXml);
+                                } catch (e) {
+                                    console.log(e);
+                                }
+                            })
+                        })
+
+                        var blocksXml = new XMLSerializer().serializeToString(blocksDiv);
+
+                        // Remove loading
+                        var loading = document.getElementById('loading');
+                        loading.parentNode.removeChild(loading);
+                        document.body.style.height = '100%';
+
+                        // let svg = pxt.blocks.render(blocksXml,
+                        //     { snippetMode: true, layout: pxt.blocks.BlockLayout.Align });
+
+                        let svgDiv = document.getElementById('svg');
+                        //svgDiv.appendChild(svg);
+
+                        // Initialize blockly with these blocks. 
+                        var editor = Blockly.inject(svgDiv, 
+                            {
+                                scrollbars: true,
+                                media: pxt.webConfig.commitCdnUrl + "blockly/media/",
+                                sounds: false,
+                                trashcan: false,
+                                collapse: false,
+                                comments: true,
+                                disable: false,
+                                readOnly: false,
+                                hasCategories: false,
+                                toolbox: '<xml id="blocklyToolboxDefinitionFlyout" style="display: none"></xml>',
+                                zoom: {
+                                    enabled: false,
+                                    controls: false,
+                                    wheel: true,
+                                    maxScale: 2.5,
+                                    minScale: .2,
+                                    scaleSpeed: 1.05,
+                                    startScale: pxt.BrowserUtils.isMobile() ? 0.7 : 0.8
+                                }
+                            }
+                        );
+
+                        editor.flyout_.show(xmlList);
+                        editor.flyout_.scrollToStart();
+                    });
+            }
+        };
+    </script>
 </body>
 
 </html>
