@@ -3,3 +3,9 @@ div {
     width: 100%;
     background-color: mediumspringgreen;
 }
+ul{
+  list-style: disc;
+     color: black;
+     
+}
+
