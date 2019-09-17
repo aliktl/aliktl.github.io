@@ -1,11 +1,21 @@
-
-div {
+.top {
     width: 100%;
-    background-color: mediumspringgreen;
+    background-color: blue;
 }
 ul{
   list-style: disc;
-     color: black;
+     color: white;
      
 }
 
+/* We're working with the body tag, and so with the WHOLE page */
+body
+{
+    background-image: url("background4.jpg");
+/*    background-color: cyan;  The page background will be black */
+    color: white; /* The page text will be white */
+}
+
+a{
+    color: yellow;
+}
