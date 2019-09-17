@@ -12,10 +12,12 @@ ul{
 body
 {
     background-image: url("background4.jpg");
+    background-size: cover;
+
 /*    background-color: cyan;  The page background will be black */
     color: white; /* The page text will be white */
 }
 
-a{
+a, h2, h3, p {
     color: yellow;
 }
