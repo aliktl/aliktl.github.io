@@ -1,4 +1,4 @@
-.top ,h1{
+.top{
     width: 100%;
     background-color: blue;
 }
@@ -11,15 +11,16 @@ ul{
 /* We're working with the body tag, and so with the WHOLE page */
 body
 {
-    background-image: url("background4.jpg");
-/*     background-size: cover; */
-/*     background-repeat: no-repeat; */
-
-
+/*    background-image: url("background4.jpg");*/
 /*    background-color: cyan;  The page background will be black */
     color: white; /* The page text will be white */
 }
 
-a, h2 {
-    color: yellow;
+a,p {
+    text-indent: 100px;
+/*     padding-left:150px;*/
+/*    text-align:center;*/
+    color: black;
+    font-size: 120%;
+    text-decoration:none;
 }
