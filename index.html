@@ -3,46 +3,51 @@
   <head>
   <link rel="stylesheet" href="main.css">
   <link rel="icon" type="image/ico" href="favicon.ico">
-
 	  <!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112406581-2"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-112406581-2');
-	</script>
-	 <script src="https://apis.google.com/js/platform.js" async defer></script>
-	  <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="618018238109-he41gfjn9lh26109l7j6rg3ed1hvkteh.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-
-
+<!-- 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112406581-2"></script> -->
+<!-- 	<script> -->
+<!-- 	  window.dataLayer = window.dataLayer || []; -->
+<!-- 	  function gtag(){dataLayer.push(arguments);} -->
+<!-- 	  gtag('js', new Date()); -->
+<!-- 	  gtag('config', 'UA-112406581-2'); -->
+<!-- 	</script> -->  
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="618018238109-he41gfjn9lh26109l7j6rg3ed1hvkteh.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <title>ALI MAZLUMOV</title>
   </head>
+	
+	
   <body>
-	   <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-    <script>
-      function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        console.log('Full Name: ' + profile.getName());
-        console.log('Given Name: ' + profile.getGivenName());
-        console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
-
-        // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token);
-      }
-    </script>
+            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+	    <script>
+	      function onSignIn(googleUser) {
+		// Useful data for your client-side scripts:
+		var profile = googleUser.getBasicProfile();
+		console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+		console.log('Full Name: ' + profile.getName());
+		console.log('Given Name: ' + profile.getGivenName());
+		console.log('Family Name: ' + profile.getFamilyName());
+		console.log("Image URL: " + profile.getImageUrl());
+		console.log("Email: " + profile.getEmail());
+		// The ID token you need to pass to your backend:
+		var id_token = googleUser.getAuthResponse().id_token;
+		console.log("ID Token: " + id_token);
+	      }
+	    </script>
+	  
+	  <a href="#" onclick="signOut();">Sign out</a>
+	<script>
+	  function signOut() {
+	    var auth2 = gapi.auth2.getAuthInstance();
+	    auth2.signOut().then(function () {
+	      console.log('User signed out.');
+	    });
+	  }
+	</script>
 	  
 	  
-	  <div class="g-signin2" data-onsuccess="onSignIn"></div>
-
+	  
   <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
     <td>
